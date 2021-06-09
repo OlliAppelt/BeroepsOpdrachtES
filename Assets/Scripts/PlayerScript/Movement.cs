@@ -4,17 +4,26 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    public float movementSpeed = 3;
-    
-    void Update()
+    private Rigidbody myRigidbody;
+
+    [SerializeField]
+    private float Speed;
+
+    private void Start()
     {
-        if (Input.GetKey(KeyCode.A))
-        {
-            transform.position += new Vector3(-movementSpeed, 0, 0) * Time.deltaTime;
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            transform.position += new Vector3(movementSpeed, 0, 0) * Time.deltaTime;
-        }
+        myRigidbody = GetComponent<Rigidbody>();
+    }
+
+    void FixedUpdate()
+    {
+        
+        float horizontal = Input.GetAxis("Horizontal");
+        HandleMovement(horizontal);
+    }
+
+    private void HandleMovement(float horizontal)
+    {
+
+        myRigidbody.velocity = new Vector3(horizontal * Speed, myRigidbody.velocity.y);
     }
 }
