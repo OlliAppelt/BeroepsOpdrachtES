@@ -8,38 +8,38 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuUI; //make a gameobject of the pausemenu
     public AudioSource auPausing;
 
+    [SerializeField] private GameObject gameOverObject;
+    private GameOverHandler gameOverHandler;
 
     void Start()
     {
         pauseMenuUI.SetActive(false); //made it false to get it transparent
         Resume();
+
+        gameOverHandler = gameOverObject.GetComponent<GameOverHandler>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!Input.GetKeyDown(KeyCode.Escape)) { return; }
+        if (gameOverHandler.IsGameOver()) { return; }
 
-        if (Input.GetKeyDown(KeyCode.Escape) && GameIsPaused == true)
-        {
-            auPausing.Play(); //play sound effect if the gameispaused is true
-            Resume(); //if the Pausemenu = true, Resume game
-        }
-        else if (Input.GetKeyDown(KeyCode.Escape) && GameIsPaused == false)
-        {
-            auPausing.Play(); //play sound effect if the gameispaused is false
-            Pause(); //if the Pausemenu = false, pause game
-        }
+        if (GameIsPaused) { Resume(); }
+        else { Pause(); }
     }
 
     void Resume()
     {
-        pauseMenuUI.SetActive(false); 
+        auPausing.Play();
+        pauseMenuUI.SetActive(false);
         Time.timeScale = 1f; //Time resume
-        GameIsPaused = false; 
+        GameIsPaused = false;
     }
 
     void Pause()
     {
+        auPausing.Play();
         pauseMenuUI.SetActive(true); //set the pause menu ui on false
         Time.timeScale = 0f; //Za Warudo
         GameIsPaused = true; //Gameobject is put on true

@@ -16,6 +16,6 @@ public class HoverPlayer : MonoBehaviour, IPointerEnterHandler
         if (audioSource == null)
             audioSource = gameObject.AddComponent<AudioSource>();
 
-        audioSource.PlayOneShot(AudioClip);
+       
     }
 }

@@ -7,6 +7,7 @@ public class Jump : MonoBehaviour
     public Vector3 jump;
     public float jumpForce = 2.0f;
 
+    private bool canDoubleJump;
     public bool isGrounded;
     Rigidbody rb;
     void Start()
@@ -15,17 +16,35 @@ public class Jump : MonoBehaviour
         jump = new Vector3(0.0f, 2.0f, 0.0f);
     }
 
-    private void OnCollisionStay()
+    private void OnCollisionEnter(Collision collision)
     {
+        if (!collision.gameObject.CompareTag("Ground")) { return; }
+
         isGrounded = true;
+        canDoubleJump = true;
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        isGrounded = false;
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space) && (isGrounded || canDoubleJump))
         {
             rb.AddForce(jump * jumpForce, ForceMode.Impulse);
-            isGrounded = false;
+
+            // If its grounded don't use the double jump.
+            if (isGrounded)
+            {
+                isGrounded = false;
+            }
+            // Else we are using the double jump.
+            else
+            {
+                canDoubleJump = false;
+            }
         }
     }
 }
