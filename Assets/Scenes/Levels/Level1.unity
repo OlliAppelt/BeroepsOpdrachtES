@@ -12442,7 +12442,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 1198602338}
-  auPausing: {fileID: 0}
+  auPausing: {fileID: 1249148240}
   gameOverObject: {fileID: 1076618361}
 --- !u!1 &310918413
 GameObject:
@@ -48946,6 +48946,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1247147312}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!82 &1249148240 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8091112607042597322, guid: 9b360a3905a12d04c885fe4c579114e8,
+    type: 3}
+  m_PrefabInstance: {fileID: 251971318}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1250332573
 GameObject:
   m_ObjectHideFlags: 0
