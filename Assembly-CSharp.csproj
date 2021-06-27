@@ -56,23 +56,12 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\PlayerScript\RespawnScript.cs" />
     <Compile Include="Assets\Scripts\PlayerScript\Camera_Follow.cs" />
-    <Compile Include="Assets\Scripts\MainMenuScripts\VolumeScenes.cs" />
-    <Compile Include="Assets\Scripts\MainMenuScripts\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\PlayerScript\Movement.cs" />
-    <Compile Include="Assets\Scripts\MainMenuScripts\MainMenuScript.cs" />
-    <Compile Include="Assets\Scripts\MainMenuScripts\PauseMenuButtonsScript.cs" />
-    <Compile Include="Assets\Scripts\MainMenuScripts\SliderAudio.cs" />
-    <Compile Include="Assets\Scripts\LevelScripts\HealthBar.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\EnemyMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerScript\JumpScript.cs" />
     <Compile Include="Assets\Scripts\CameraFollow2ndCam.cs" />
-    <Compile Include="Assets\Scripts\MainMenuScripts\HoverPlayer.cs" />
-    <Compile Include="Assets\Gravity.cs" />
     <Compile Include="Assets\Scripts\LevelScripts\GetHitByEnemy.cs" />
-    <Compile Include="Assets\Scripts\GameOverMenuScripts\GameOverHandler.cs" />
-    <Compile Include="Assets\Jump.cs" />
-    <Compile Include="Assets\Scripts\GameOverMenuScripts\GameOverButtons.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
