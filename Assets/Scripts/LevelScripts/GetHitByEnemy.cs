@@ -6,21 +6,25 @@ using UnityEngine.UI;
 [RequireComponent(typeof(AudioSource))]
 public class GetHitByEnemy : MonoBehaviour
 {
-    public Camera DestroyCamera;
-    public AudioClip PlayClip;
-    public static bool GameOver = false;
-    public GameObject GameOverScreen;
-    public GameObject Player;
-    public HealthBar healthbar;
-    public int maxHealth = 100;
-    public int currentHealth;
+    [SerializeField] private AudioClip PlayClip;
+
+    [SerializeField] private GameObject healthbarObject;
+    private HealthBar healthBar;
+
+    [SerializeField] private GameObject gameOverMenu;
+    private GameOverHandler gameOverHandler;
+
+    [SerializeField] private int maxHealth = 100;
+    private int currentHealth;
    
 
     void Start()
     {
-        GameOverScreen.SetActive(false);
+        healthBar = healthbarObject.GetComponent<HealthBar>();
+        gameOverHandler = gameOverMenu.GetComponent<GameOverHandler>();
+
         currentHealth = maxHealth;
-        healthbar.SetMaxHealth(maxHealth);
+        healthBar.SetMaxHealth(maxHealth);
     }
 
     void OnCollisionEnter(Collision collision)
@@ -28,6 +32,7 @@ public class GetHitByEnemy : MonoBehaviour
         AudioSource audio = GetComponent<AudioSource>();
         audio.clip = PlayClip;
 
+        Debug.Log(collision.gameObject.tag);
 
         switch (collision.gameObject.tag)
         {
@@ -54,14 +59,12 @@ public class GetHitByEnemy : MonoBehaviour
         if (currentHealth != 0) { return; }
 
         audio.Play();
-        GameOverScreen.SetActive(true);
-        Destroy(DestroyCamera);
-        Destroy(Player);
+        gameOverHandler.StartGameOver();
     }
 
     void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        healthbar.SetHealth(currentHealth);
+        healthBar.SetHealth(currentHealth);
     }
 }

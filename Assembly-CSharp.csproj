@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\GameOverMenuScripts\GameOverHandler.cs" />
     <Compile Include="Assets\Jump.cs" />
     <Compile Include="Assets\Scripts\GameOverMenuScripts\GameOverButtons.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\EnemyMovement.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
