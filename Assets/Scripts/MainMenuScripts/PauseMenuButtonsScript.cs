@@ -11,6 +11,11 @@ public class PauseMenuButtonsScript : MonoBehaviour
         SceneManager.LoadScene("MainMenu"); //Go back to the main menu
     }
 
+    public void ContinueComic()
+    {
+        SceneManager.LoadScene("Level1");
+    }
+
     public void ExitGame()
     {
         Debug.Log("This thing works if you wanna know"); //Quit Game

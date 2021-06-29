@@ -16,13 +16,15 @@ public class GetHitByEnemy : MonoBehaviour
 
     [SerializeField] private int maxHealth = 100;
     private int currentHealth;
+
+   
    
 
     void Start()
     {
         healthBar = healthbarObject.GetComponent<HealthBar>();
         gameOverHandler = gameOverMenu.GetComponent<GameOverHandler>();
-
+        
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
     }
@@ -50,7 +52,7 @@ public class GetHitByEnemy : MonoBehaviour
                 TakeDamage(30);
                 audio.Play();
                 break;
-
+                
             default:
                 //dit doet niks
                 break;
@@ -60,7 +62,11 @@ public class GetHitByEnemy : MonoBehaviour
 
         audio.Play();
         gameOverHandler.StartGameOver();
+
+        
     }
+
+    
 
     void TakeDamage(int damage)
     {

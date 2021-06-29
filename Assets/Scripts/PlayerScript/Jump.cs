@@ -10,6 +10,10 @@ public class Jump : MonoBehaviour
     private bool canDoubleJump;
     public bool isGrounded;
     Rigidbody rb;
+
+    public AudioSource JumpPlayer;
+    public AudioSource LandPlayer;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -20,6 +24,7 @@ public class Jump : MonoBehaviour
     {
         if (!collision.gameObject.CompareTag("Ground")) { return; }
 
+        LandPlayer.Play();
         isGrounded = true;
         canDoubleJump = true;
     }
