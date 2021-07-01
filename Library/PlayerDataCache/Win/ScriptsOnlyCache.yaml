@@ -15,6 +15,8 @@ ScriptsOnlyBuild:
     - PauseMenuButtonsScript
     - SliderAudio
     - VolumeScenes
+    - WinScreen
+    - YouWin
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
@@ -22,6 +24,7 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
+    - TMPro.TextMeshProUGUI
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -37,6 +40,67 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
   sceneClasses:
+    Assets/Scenes/Levels/Dialogue.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1532}
+    - Class: 114
+      Script: {instanceID: 1534}
+    - Class: 114
+      Script: {instanceID: 1804}
+    - Class: 114
+      Script: {instanceID: 2380}
+    - Class: 114
+      Script: {instanceID: 2484}
+    - Class: 114
+      Script: {instanceID: 2522}
+    - Class: 114
+      Script: {instanceID: 2632}
+    - Class: 114
+      Script: {instanceID: 2822}
+    - Class: 114
+      Script: {instanceID: 2914}
+    - Class: 114
+      Script: {instanceID: 3170}
+    - Class: 114
+      Script: {instanceID: 3388}
+    - Class: 114
+      Script: {instanceID: 16652}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
     Assets/Scenes/Levels/Level1.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -62,11 +126,17 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 82
       Script: {instanceID: 0}
     - Class: 83
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -91,36 +161,42 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2708}
     - Class: 114
-      Script: {instanceID: 2820}
+      Script: {instanceID: 2710}
     - Class: 114
-      Script: {instanceID: 2878}
+      Script: {instanceID: 2822}
     - Class: 114
-      Script: {instanceID: 2912}
+      Script: {instanceID: 2880}
     - Class: 114
-      Script: {instanceID: 3168}
+      Script: {instanceID: 2914}
     - Class: 114
-      Script: {instanceID: 3322}
+      Script: {instanceID: 3170}
     - Class: 114
-      Script: {instanceID: 3386}
+      Script: {instanceID: 3324}
     - Class: 114
-      Script: {instanceID: 3472}
+      Script: {instanceID: 3388}
     - Class: 114
-      Script: {instanceID: 3594}
+      Script: {instanceID: 3474}
     - Class: 114
-      Script: {instanceID: 3602}
+      Script: {instanceID: 3480}
     - Class: 114
-      Script: {instanceID: 4128}
+      Script: {instanceID: 3600}
     - Class: 114
-      Script: {instanceID: 4324}
+      Script: {instanceID: 3608}
     - Class: 114
-      Script: {instanceID: 24090}
+      Script: {instanceID: 4134}
     - Class: 114
-      Script: {instanceID: 24098}
+      Script: {instanceID: 4332}
+    - Class: 114
+      Script: {instanceID: 24898}
+    - Class: 114
+      Script: {instanceID: 24902}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
     - Class: 134
+      Script: {instanceID: 0}
+    - Class: 136
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -176,19 +252,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2632}
     - Class: 114
-      Script: {instanceID: 2820}
+      Script: {instanceID: 2822}
     - Class: 114
-      Script: {instanceID: 2912}
+      Script: {instanceID: 2914}
     - Class: 114
-      Script: {instanceID: 3386}
+      Script: {instanceID: 3388}
     - Class: 114
-      Script: {instanceID: 3678}
+      Script: {instanceID: 3684}
     - Class: 114
-      Script: {instanceID: 3846}
+      Script: {instanceID: 3852}
     - Class: 114
-      Script: {instanceID: 4102}
+      Script: {instanceID: 4108}
     - Class: 114
-      Script: {instanceID: 4392}
+      Script: {instanceID: 4400}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -210,6 +286,8 @@ ScriptsOnlyBuild:
     - Class: 258
       Script: {instanceID: 0}
     - Class: 328
+      Script: {instanceID: 0}
+    - Class: 329
       Script: {instanceID: 0}
     - Class: 850595691
       Script: {instanceID: 0}
@@ -444,6 +522,12 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: WinScreen
+  - hash:
+      serializedVersion: 2
       Hash: 13f8f373b951cbaf0f891949929b196a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -594,7 +678,7 @@ ScriptsOnlyBuild:
     className: PositionAsUV1
   - hash:
       serializedVersion: 2
-      Hash: fe02c3cc0cbcf3e4025e406fd0cbf4aa
+      Hash: 6eb843bc9bfa5c69322a74eb10de7032
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Jump
@@ -634,6 +718,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PauseMenu
+  - hash:
+      serializedVersion: 2
+      Hash: ecfe6007a14e6d285da52dee630161ce
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: YouWin
   - hash:
       serializedVersion: 2
       Hash: a5781dc71a671b1ad2b38de19f24b71f
@@ -792,6 +882,12 @@ ScriptsOnlyBuild:
     className: ScreenSpaceReflections
   - hash:
       serializedVersion: 2
+      Hash: eb2f982b50fe0235815179534de12ae5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CoinScript
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -847,5 +943,6 @@ ScriptsOnlyBuild:
   platform: 5
   scenePathNames:
   - Assets/Scenes/Menu/MainMenu.unity
+  - Assets/Scenes/Levels/Dialogue.unity
   - Assets/Scenes/Levels/Level1.unity
-  playerPath: C:/Users/appel/Desktop/Escape The Light/TheBeeVasion.exe
+  playerPath: D:/BuildDemo/bl/TheBeeVasion.exe
